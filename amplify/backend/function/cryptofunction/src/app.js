@@ -57,6 +57,18 @@ app.get('/item', function(req, res) {
   res.json({success: 'get call succeed!', url: req.url});
 });
 
+app.get(
+  '/born'
+  , (req, res) => {
+
+    axios.get('https://api.github.com/users/mitchellkealy')
+    .then(response => {
+      res.json({ borninfo: response.data })
+    })
+    .catch(err => res.json ({ error: err }))
+  }
+)
+
 app.get('/item/*', function(req, res) {
   // Add your code here
   res.json({success: 'get call succeed!', url: req.url});

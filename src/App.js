@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { API } from 'aws-amplify';
+import GitHubBornOn from './GitHubBornOn';
 
 const App = () => {
 
@@ -45,6 +46,7 @@ const App = () => {
   }
 
   return (
+    <>
     <div className="App">
       <input 
         placeholder='Start with...'
@@ -74,6 +76,8 @@ const App = () => {
         ))
       }
     </div>
+    </>
+    <GitHubBornOn />
   );
 }
 
