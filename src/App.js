@@ -76,8 +76,9 @@ const App = () => {
         ))
       }
     </div>
-    </>
     <GitHubBornOn />
+    </>
+    
   );
 }
 
